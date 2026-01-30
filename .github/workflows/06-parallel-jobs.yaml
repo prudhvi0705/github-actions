@@ -1,0 +1,27 @@
+name: parallel jobs
+on: [push]
+
+jobs:
+  job-1:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Say Hello
+        run: echo "Hello World from GitHub Actions 🚀"
+
+  job-2:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Say Hello
+        run: echo "Hello World from GitHub Actions 🚀"
+
+  job-3:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Say Hello
+        run: echo "Hello World from GitHub Actions 🚀"
+
+  job-4:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Say Hello
+        run: echo "Hello World from GitHub Actions 🚀"  
