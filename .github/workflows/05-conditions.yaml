@@ -1,0 +1,17 @@
+name: Hello World Workflow
+on: [push]
+
+jobs:
+  conditions-demo:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Say Hello
+        run: echo "Hello World from GitHub Actions 🚀"
+
+      - name: trigger PROD deploy
+        if: ${{ github.ref == 'refs/heads/main' }
+        run : echo "deploy to PROD"
+
+      - name: trigger DEV deploy
+        if: ${{ github.ref == 'feature*' }
+        run : echo "deploy to DEV"
